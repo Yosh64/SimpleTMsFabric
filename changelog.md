@@ -14,3 +14,7 @@ TMs and TRs that drop are based on the Pokémon's tm, egg and tutor move list.
 - Removed 1 fake TM/TR
 - In collaboration with davo899:
     - Made SimpleTMs compatible with *[CobblemonTrainers](https://www.curseforge.com/minecraft/mc-mods/cobblemontrainers)*
+
+#### [1.1.2c (June 6th, 2024)](#1.1.2c) *1.1.2c stands for 1.1.2 Custom, since changes are subjective and may not be in line with 'vision.* 
+- Added French translation (uncompleted)
+- Made TM/TR stackable up to 16

@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "git.dragomordor.simpletms"
-version = "1.1.1"
+version = "1.1.2c"
 
 repositories {
     mavenLocal()

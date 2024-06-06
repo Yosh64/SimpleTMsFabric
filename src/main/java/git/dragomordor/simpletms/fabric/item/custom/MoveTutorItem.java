@@ -34,7 +34,7 @@ public class MoveTutorItem extends PokemonUseItem {
     private final int cooldownTicks = SimpleTMsConfig.getTMCooldownTicks();
 
     public MoveTutorItem(String moveName, String moveType, boolean singleUse) {
-        super(new FabricItemSettings().maxCount(1));
+        super(new FabricItemSettings().maxCount(16));
         this.moveType = moveType;
         this.moveName = moveName;
         SingleUse = singleUse;
