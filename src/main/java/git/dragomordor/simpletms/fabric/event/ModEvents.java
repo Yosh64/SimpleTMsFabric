@@ -61,7 +61,7 @@ public class ModEvents {
                     float dropChanceTRPercentage = SimpleTMsConfig.getTRDropChance();
                     System.out.println("Random TR config: "+dropChanceTRPercentage);
                     if (randomTRChance <= dropChanceTRPercentage && !droppedTRitem.isEmpty()) {
-                        spawnTRItem(world, playerEntity, pos, droppedTRitem, event);
+                        spawnTMItem(world, playerEntity, pos, droppedTRitem, event);
                     }
                 }
             }
@@ -82,20 +82,6 @@ public class ModEvents {
             world.spawnEntity(itemEntity);
         }
         player.sendMessage(Text.of("Received "+tmName+" from "+event.getKilled().getEffectedPokemon().getDisplayName().getString()),true);
-
-    }
-
-    // Helper method to spawn a TR item in the world
-    private static void spawnTRItem(World world,PlayerEntity player, BlockPos pos, ItemStack trItemStack, BattleFaintedEvent event) {
-        String trName = tmItemStack.getName().getString();
-
-        ItemEntity itemEntity = new ItemEntity(world, pos.getX(), pos.getY(), pos.getZ(), tmItemStack);
-        // Add the TM item to the player's inventory
-        PlayerInventory playerInventory = player.getInventory();
-        if (!playerInventory.insertStack(tmItemStack)) { // If the inventory is full, drop the item in the world
-            world.spawnEntity(itemEntity);
-        }
-        player.sendMessage(Text.of("Received "+trName+" from "+event.getKilled().getEffectedPokemon().getDisplayName().getString()),true);
 
     }
 
